@@ -1,0 +1,323 @@
+/* styles.css */
+
+/* 1. Color Palette */
+:root {
+  --primary:    #002147;   /* Navy */
+  --background: #e6e6e6;   /* Light gray page background */
+  --text:       #3A3A3A;   /* Dark charcoal */
+  --light:      #ffffff;   /* White panels */
+  --accent:     #D4A15B;   /* Gold accent */
+  --highlight:  #23967F;   /* Teal highlight */
+}
+
+/* 2. Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 3. Header / Hero with Logo */
+header.hero {
+  background: var(--primary);
+  color: var(--light);
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.hero-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+/* Square white background for logo */
+.logo-container {
+  background: var(--light);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-container img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+header.hero h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+header.hero .subhead {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* 4. Navigation & Contact Info */
+header.hero nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+.nav-links a {
+  color: var(--light);
+  font-weight: bold;
+}
+.nav-links a:hover,
+.nav-links a:focus {
+  color: var(--accent);
+}
+.cta-btn {
+  background: var(--accent);
+  color: var(--light);
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.cta-btn:hover,
+.cta-btn:focus {
+  background: var(--highlight);
+}
+header.hero .contact-info {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
+header.hero .contact-info a {
+  font-weight: bold;
+}
+
+/* 5. Main & Sections */
+main {
+  padding: 2rem 0;
+}
+.section {
+  background: var(--light);
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  max-width: 900px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.section h2 {
+  text-align: center;
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.section p {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 6. Slider / Services */
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 400px;
+  margin: 1.5rem auto;
+}
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+.slide {
+  flex: 0 0 100%;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+.icon {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+}
+.slide h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+.slide p {
+  max-width: 300px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  background: var(--primary);
+  color: var(--light);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+.slider-btn.prev { left: 0.5rem; }
+.slider-btn.next { right: 0.5rem; }
+.slider-btn:hover,
+.slider-btn:focus {
+  background: var(--highlight);
+  outline: none;
+}
+
+/* 7. FAQ */
+#faq details {
+  max-width: 600px;
+  margin: 1rem auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+}
+#faq summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+#faq summary:focus {
+  outline: 2px solid var(--accent);
+}
+
+/* 8. Profile / Attorney */
+.profile-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--primary);
+}
+.profile-text {
+  max-width: 600px;
+}
+.profile-text h2 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+/* 9. Contact Form */
+.contact-form {
+  max-width: 500px;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.consent-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btn.primary {
+  background: var(--accent);
+  color: var(--light);
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+}
+.btn.primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.btn.primary:focus {
+  outline: 2px solid var(--highlight);
+}
+
+/* 10. Footer */
+footer.footer {
+  background: var(--primary);
+  color: var(--light);
+  text-align: center;
+  padding: 1rem 0;
+}
+footer.footer a:hover,
+footer.footer a:focus {
+  text-decoration: underline;
+}
+
+/* 11. Cookie Banner & Toast */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--accent);
+  color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  z-index: 1000;
+}
+.cookie-banner.hidden { display: none; }
+.toast {
+  position: fixed;
+  bottom: 3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: var(--light);
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+.toast.hidden { display: none; }
+
+/* 12. Fade‑up Animation */
+.fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
+  animation-play-state: paused;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
