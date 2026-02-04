@@ -135,23 +135,31 @@
   <!-- CONTACT FORM (with Phone Number) -->
 <section id="contact" class="section">
   <div class="container">
-    <h2>Contact Us</h2>
+    <h2>Contact Us</h2>
+
     <form
-      action="https://formsubmit.co/johnbeckstead@gmail.com"
+      action="https://formsubmit.co/heather@becksteadlaw.com"
       method="POST"
       class="contact-form"
     >
       <!-- honeypot to trap bots -->
       <input type="hidden" name="_honey" value="">
-      <!-- incoming email subject -->
+
+      <!-- email subject -->
       <input type="hidden" name="_subject" value="📨 New message from Beckstead Law website">
-      <!-- auto‑reply to visitor -->
-      <input type="hidden" name="_replyto" value="email">
-      <input 
-        type="hidden" 
-        name="_autoresponse" 
-        value="Thank you for contacting Beckstead Law! We’ve received your message and will be in touch shortly." 
+
+      <!-- BCC secondary email -->
+      <input type="hidden" name="_bcc" value="shaw@becksteadlaw.com,john@becksteadlaw.com">
+
+      <!-- auto-reply to visitor -->
+      <input
+        type="hidden"
+        name="_autoresponse"
+        value="Thank you for contacting Beckstead Law! We’ve received your message and will be in touch shortly."
       >
+
+      <!-- optional redirect after submit -->
+      <!-- <input type="hidden" name="_next" value="https://becksteadlaw.com/thank-you.html"> -->
 
       <label>
         Name
@@ -165,7 +173,7 @@
 
       <label>
         Phone
-        <input type="tel" name="phone" placeholder="555‑123‑4567" required>
+        <input type="tel" name="phone" placeholder="555-123-4567" required>
       </label>
 
       <label>
@@ -175,13 +183,14 @@
 
       <label class="consent-box">
         <input type="checkbox" name="consent" required>
-        I understand this does not create an attorney‑client relationship.
+        I understand this does not create an attorney-client relationship.
       </label>
 
-      <button type="submit" class="btn primary">Send Message</button>
+      <button type="submit" class="btn primary">Send Message</button>
     </form>
   </div>
 </section>
+
 
 
   </main>
@@ -196,5 +205,4 @@
   <script src="index.js"></script>
 </body>
 </html>
-
 
